@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  h1 Time to get some candidates for your company, #{user.profile.name || user.email || user.id}!
+  p.lead Post jobs, review jobs or edit jobs!
+  hr
+  .row
+    .col-sm-6
+      h2 Post a job
+      p Post a job to your list of jobs & try to generate new people in your recruitment funnel.
+      p
+        a.btn.btn-default(href='post', role='button') Go post a job! »
+    .col-sm-6
+      h2 Edit jobs
+      p Edit an already-posted job you have online. This won't affect your recruitment funnel!
+      p
+        a.btn.btn-default(href='edit', role='button') Go edit »
+    .col-sm-6
+      h2 List all jobs
+      p Get a list of everything you've got online!
+      p
+        a.btn.btn-default(href='job/list', role='button') View jobs »
+    .col-sm-6
+      h2 Candidates
+      p List all your candidates & see what jobs they're associated to!
+      p
+        a.btn.btn-default(href='job/candidates', role='button') View candidates »
