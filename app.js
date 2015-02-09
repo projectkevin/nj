@@ -28,7 +28,7 @@ var homeController = require('./controllers/home');
 var userController = require('./controllers/user');
 var apiController = require('./controllers/api');
 var contactController = require('./controllers/contact');
-var jobController = require('./controllers/job.js');
+var jobController = require('./controllers/job');
 
 /**
  * API keys and Passport configuration.
@@ -191,7 +191,7 @@ app.get('/auth/venmo/callback', passport.authorize('venmo', { failureRedirect: '
  *  Job organisation routes
  */
 
-app.get('/job', passportConf.isAuthenticated, jobController.getJob);
+app.get('/jobs', passportConf.isAuthenticated, jobController.getJobs);
 
 /**
  * Error Handler.

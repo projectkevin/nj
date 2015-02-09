@@ -13,11 +13,11 @@
       ul.nav.navbar-nav
         li(class=title=='Home'?'active':undefined)
           a(href='/') Home
-        if user
+        if user.profile.name =='Kevin Admin'
           li(class=title=='API Examples'?'active':undefined)
             a(href='/api') API Examples
           li(class=title=='Jobs'?'active':undefined)
-            a(href='/job') Jobs
+            a(href='/jobs') Jobs
         li(class=title=='Contact'?'active':undefined)
           a(href='/contact') Contact
       ul.nav.navbar-nav.navbar-right
