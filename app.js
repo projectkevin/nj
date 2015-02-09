@@ -192,6 +192,7 @@ app.get('/auth/venmo/callback', passport.authorize('venmo', { failureRedirect: '
  */
 
 app.get('/jobs', passportConf.isAuthenticated, jobController.getJobs);
+app.post('/jobs', jobController.postJobs);
 
 /**
  * Error Handler.
